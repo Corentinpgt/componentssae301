@@ -18,7 +18,7 @@ $tokencolors: (
     --prixcartevelo: var(--grey),
     --othertext: var(--darkBlue),
     --footertitle: var(--white),
-    --footersubtitle: var(--white)
+    --footersubtitle: var(--white),
 );
 
 
@@ -117,4 +117,14 @@ h1 {
     &__btn {
 
     }
+}
+
+
+
+
+/* ~~ Navigation Css ~~ */
+
+
+.nav__section_top {
+    background-color: map-get($map: $primarycolors, $key: --black);
 }
