@@ -18,7 +18,9 @@ $tokencolors: (
     --prixcartevelo: var(--grey),
     --othertext: var(--darkBlue),
     --footertitle: var(--white),
-    --footersubtitle: var(--white)
+    --footersubtitle: var(--white),
+
+    --gradiantbtn : linear-gradient(90deg, #080986, #0050fc)
 );
 
 
@@ -85,9 +87,21 @@ h1 {
 }
 
 .productcard {
+    position: relative;
+    margin: 0 auto;
     width: 25rem;
     height: 30rem;
     box-shadow: 0px 5px 21px 3px rgba(0,0,0,0.3);
+
+
+    &__banner1 {
+        display: none;
+    }
+
+    &__banner2 {
+        display: none;
+
+    }
 
     &__figure {
         padding: 1rem;
@@ -115,6 +129,152 @@ h1 {
     }
 
     &__btn {
+        padding: .5rem 1rem;
+        background: map-get($tokencolors, --gradiantbtn );
+        color: map-get($primarycolors, --white );
+        border: none;
+        text-transform: uppercase;
+
+    }
+
+    &--expired {
+        position: relative;
+        margin: 0 auto;
+        width: 25rem;
+        height: 30rem;
+        box-shadow: 0px 5px 21px 3px rgba(0,0,0,0.3);
+    
+        .productcard {
+            &__banner1 {
+                display: block;
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                padding: .25rem .5rem;
+                color: map-get($primarycolors, --white );
+                background-color: map-get($primarycolors , --darkBlueGrey );
+        
+            }
+        }
+    
+
+    }
+
+    &--soon {
+        position: relative;
+        margin: 0 auto;
+        width: 25rem;
+        height: 30rem;
+        box-shadow: 0px 5px 21px 3px rgba(0,0,0,0.3);
+        
+        .productcard {
+            &__banner1 {
+                display: none;
+        
+            }
+
+            &__banner2 {
+                display: block;
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                padding: .25rem .5rem;
+                color: map-get($primarycolors, --white );
+                background-color: map-get($primarycolors , --green );
+        
+            }
+        }
+    
+
+    }
+}
+
+.footer {
+
+    &__up {
+        width: 100%;
+        height: 30rem;
+        color: map-get($primarycolors, --white );
+        background-color: map-get($primarycolors, --veryDarkBlue );
+    }
+
+    &__upul {
+        padding: 2rem 0 0 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    &__upli {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__uph2 {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &__upulsecond {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__uplisecond {
+        font-size: .75rem;
+    }
+
+    &__down {
+        padding: 1rem 0;
+        width: 100%;
+        color: map-get($primarycolors , --white );
+        background-color: map-get($primarycolors, --darkBlueGrey );
+    }
+
+    &__ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__li {
+        text-align: center;
+    }
+}
+
+
+@media screen and (min-width : 800px) {
+    .footer {
+
+        &__up {
+            height: 20rem;
+        }
+    
+        &__upul {
+            padding: 2rem 0 0 2rem;
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+    
+        }
+    
+        &__upli {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    
+        &__uph2 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        &__uplisecond {
+            font-size: 1rem;
+        }
 
     }
 }
