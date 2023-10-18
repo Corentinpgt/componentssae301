@@ -179,7 +179,93 @@ h1 {
   text-align: center;
 }
 
-@media screen and (min-width: 800px) {
+.product {
+  position: relative;
+  margin: 0 auto;
+  width: 30rem;
+}
+.product__banner1 {
+  display: none;
+}
+.product__banner2 {
+  display: none;
+}
+.product__visual {
+  display: flex;
+  flex-direction: column;
+}
+.product__figure {
+  width: 100%;
+}
+.product__title {
+  color: var(--darkBlue);
+}
+.product__price {
+  margin-bottom: 2rem;
+  color: var(--grey);
+}
+.product__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.product__li {
+  display: flex;
+  justify-content: space-between;
+  width: 12rem;
+}
+.product__select {
+  width: 7rem;
+  background-color: #FFFFFF;
+}
+.product__down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.product__btn {
+  padding: 0.75rem 1rem;
+  width: 15rem;
+  background: linear-gradient(90deg, #080986, #0050fc);
+  color: #FFFFFF;
+  border: none;
+  text-transform: uppercase;
+}
+.product--expired {
+  position: relative;
+  margin: 0 auto;
+  width: 30rem;
+}
+.product--expired .product__banner1 {
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  padding: 0.25rem 0.5rem;
+  color: #FFFFFF;
+  background-color: #162E4B;
+}
+.product--soon {
+  position: relative;
+  margin: 0 auto;
+  width: 30rem;
+}
+.product--soon .product__banner1 {
+  display: none;
+}
+.product--soon .product__banner2 {
+  display: block;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  padding: 0.25rem 0.5rem;
+  color: #FFFFFF;
+  background-color: #068808;
+}
+
+@media screen and (min-width: 1000px) {
   .footer__up {
     height: 20rem;
   }
@@ -200,6 +286,76 @@ h1 {
   }
   .footer__uplisecond {
     font-size: 1rem;
+  }
+  .product {
+    width: 100%;
+  }
+  .product__visual {
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .product__figure {
+    width: 50%;
+  }
+  .product__figcaption {
+    position: relative;
+  }
+  .product__title {
+    font-size: 3rem;
+  }
+  .product__price {
+    font-size: 1.5rem;
+  }
+  .product__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .product__li {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+  .product__select {
+    width: 10rem;
+    font-size: 1.5rem;
+    background-color: #FFFFFF;
+  }
+  .product__down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 30rem;
+  }
+  .product__desc {
+    font-size: 1.5rem;
+    width: 30rem;
+  }
+  .product__btn {
+    padding: 1rem 1.5rem;
+    width: 20rem;
+    font-size: 1.5rem;
+  }
+  .product--expired {
+    width: 100%;
+  }
+  .product--expired .product__banner1 {
+    top: -2rem;
+    left: 0;
+  }
+  .product--soon {
+    width: 100%;
+  }
+  .product--soon .product__banner1 {
+    display: none;
+  }
+  .product--soon .product__banner2 {
+    top: -2rem;
+    left: 0;
   }
 }
 

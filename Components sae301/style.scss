@@ -246,7 +246,186 @@ h1 {
 }
 
 
-@media screen and (min-width : 800px) {
+
+
+.product {
+    position: relative;
+    margin: 0 auto;
+    width: 30rem;
+
+
+    &__banner1 {
+        display: none;
+    }
+
+    &__banner2 {
+        display: none;
+
+    }
+
+    &__visual {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__figure {
+        width: 100%;
+        
+    }
+
+    &__title {
+        color: map-get($tokencolors, --nomcartevelo );
+        
+    }
+    
+    &__price {
+        margin-bottom: 2rem;
+        color: map-get($tokencolors, --prixcartevelo );
+    }
+    
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+
+    &__li {
+        display: flex;
+        justify-content: space-between;
+        width: 12rem;
+    }
+
+    &__select {
+        width: 7rem;
+        background-color: map-get($primarycolors, --white );
+    }
+    
+    &__down {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    &__btn {
+        padding: .75rem 1rem;
+        width: 15rem;
+        background: map-get($tokencolors, --gradiantbtn );
+        color: map-get($primarycolors, --white );
+        border: none;
+        text-transform: uppercase;
+
+    }
+
+    &--expired {
+        position: relative;
+        margin: 0 auto;
+        width: 30rem;
+    
+        .product {
+            &__banner1 {
+                display: block;
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                padding: .25rem .5rem;
+                color: map-get($primarycolors, --white );
+                background-color: map-get($primarycolors , --darkBlueGrey );
+        
+            }
+        }
+    
+
+    }
+
+    &--soon {
+        position: relative;
+        margin: 0 auto;
+        width: 30rem;
+        
+        .product {
+            &__banner1 {
+                display: none;
+        
+            }
+
+            &__banner2 {
+                display: block;
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                padding: .25rem .5rem;
+                color: map-get($primarycolors, --white );
+                background-color: map-get($primarycolors , --green );
+        
+            }
+        }
+    
+
+    }
+}
+
+
+.productpanier {
+
+
+    &__figure {
+
+    }
+
+    &__figcaption {
+
+    }
+
+    &__desc {
+
+    }
+
+    &__title {
+
+    }
+
+    &__ul {
+
+    }
+
+    &__li {
+
+    }
+
+    &__quantity {
+
+    }
+
+    &__x {
+
+    }
+
+    &__btn {
+
+    }
+
+    &__plus {
+
+    }
+
+    &__minus {
+
+    }
+
+    &__price {
+        
+    }
+}
+
+
+
+
+
+
+@media screen and (min-width : 1000px) {
     .footer {
 
         &__up {
@@ -276,5 +455,101 @@ h1 {
             font-size: 1rem;
         }
 
+    }
+
+    .product {
+        width: 100%;
+    
+        &__visual {
+            justify-content: center;
+            flex-direction: row;
+            gap: 3rem;
+        }
+    
+        &__figure {
+            width: 50%; 
+        }
+
+        &__figcaption {
+            position: relative;
+        }
+    
+        &__title {
+            font-size: 3rem;            
+        }
+        
+        &__price {
+            font-size: 1.5rem;
+        }
+        
+        &__ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+    
+        }
+    
+        &__li {
+            display: flex;
+            justify-content: space-between;
+            width: 20rem;
+            font-size: 1.5rem;
+        }
+    
+        &__select {
+            width: 10rem;
+            font-size: 1.5rem;
+            background-color: map-get($primarycolors, --white );
+        }
+
+        
+        &__down {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            width: 30rem;
+        }
+        
+        &__desc {
+            font-size: 1.5rem;
+            width: 30rem;
+        }
+
+        &__btn {
+            padding: 1rem 1.5rem;
+            width: 20rem;
+            font-size: 1.5rem;
+    
+        }
+    
+        &--expired {
+            width: 100%;
+        
+            .product {
+                &__banner1 {
+                    top: -2rem;
+                    left: 0;
+                }
+            }    
+        }
+    
+        &--soon {
+            width: 100%;
+            
+            .product {
+                &__banner1 {
+                    display: none;
+            
+                }
+    
+                &__banner2 {
+                    top: -2rem;
+                    left: 0;
+            
+                }
+            }
+        }
     }
 }
