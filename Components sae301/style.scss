@@ -219,6 +219,78 @@ h1 {
     }
 }
 
+/* ~~ Produit Backoffice CSS ~~ */
+
+.product__article {
+    /* max-width: 50rem; */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
+}
+
+.product__section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    
+    &_content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    &_status {
+        padding: 1.5rem 2rem;
+        color: map-get($map: $primarycolors, $key: --white);
+        background-color: map-get($map: $primarycolors, $key: --darkBlue);
+    }
+    
+    &_trait {
+        font-size: 3rem;
+    }
+}
+
+
+/* ~~ Produit Backoffice CSS ~~ */
+
+.profil__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+    gap: 5rem;
+
+    &_img {
+        width: 12.5rem;
+        height: 12.5rem;
+        object-fit: cover;
+        border-radius: 100%;
+        border: 5px solid map-get($map: $primarycolors, $key: --black);
+    }
+
+    .profil__figure_content {
+
+        &_name {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: map-get($map: $primarycolors, $key: --darkGrey);
+        }
+
+        &_tel,
+        &_mail {
+            font-size: 1.25rem;
+        }
+        
+        &_tel {
+            font-weight: 600;
+            color: map-get($map: $primarycolors, $key: --grey);
+        }
+    }
+}
+
+
+
 
 @media screen and (min-width: 801px) {
     .btn-menu {
