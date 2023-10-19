@@ -137,6 +137,10 @@ h1 {
 
     }
 
+    &__btn:hover {
+        cursor: pointer;
+    }
+
     &--expired {
         position: relative;
         margin: 0 auto;
@@ -319,6 +323,10 @@ h1 {
 
     }
 
+    &__btn:hover {
+        cursor: pointer;
+    }
+
     &--expired {
         position: relative;
         margin: 0 auto;
@@ -369,55 +377,117 @@ h1 {
 
 
 .productpanier {
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 1rem auto;
+    width: 39rem;
+    box-shadow: 0px 5px 21px 3px rgba(0,0,0,0.3);
 
     &__figure {
-
-    }
-
-    &__figcaption {
-
+        width: 10rem;
     }
 
     &__desc {
-
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
     }
 
     &__title {
+        color: map-get($tokencolors, --nomcartevelo );
 
     }
 
-    &__ul {
+    &__quantity {
+        display: flex;
+        gap: 1rem;
+    }
 
+    &__x {
+        font-size: 3rem;
+        line-height: 7rem;
+    }
+
+    &__btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__plus {
+        width: 3rem;
+        aspect-ratio: 1;
+        font-size: 2rem;
+        color: map-get($primarycolors, --white );
+        background-color: map-get($primarycolors, --darkBlue );
+    }
+
+    &__minus {
+        width: 3rem;
+        aspect-ratio: 1;
+        font-size: 2rem;
+        color: map-get($primarycolors, --white );
+        background-color: map-get($primarycolors, --darkBlue );
+    }
+
+    &__price {
+        margin: 0 auto;
+        padding: .5rem 1rem;
+        font-size: 1.5rem;
+        color: map-get($primarycolors, --white );
+        background-color: map-get($primarycolors, --darkBlue );
+    }
+}
+
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 40rem;
+
+
+    &__h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: map-get($primarycolors, --darkGrey );
+    }
+
+    &__ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     &__li {
 
     }
 
-    &__quantity {
-
-    }
-
-    &__x {
-
+    &__input {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        color: map-get($primarycolors, --black );
+        border: 1px solid map-get($primarycolors, --darkGrey );
     }
 
     &__btn {
-
+        padding: .75rem 1rem;
+        width: 15rem;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        background: map-get($tokencolors, --gradiantbtn );
+        color: map-get($primarycolors, --white );
+        border: none;
     }
 
-    &__plus {
-
+    &__btn:hover {
+        cursor: pointer;
     }
 
-    &__minus {
-
-    }
-
-    &__price {
-        
-    }
 }
 
 
@@ -550,6 +620,25 @@ h1 {
             
                 }
             }
+        }
+    }
+
+    .productpanier {
+        width: 57.5rem;
+
+        &__ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 22rem;
+            gap: 1rem;
+        }
+    
+        &__price {
+            padding: .5rem 2rem;
+            font-size: 1.5rem;
+            color: map-get($primarycolors, --white );
+            background-color: map-get($primarycolors, --darkBlue );
+            line-height: 7rem;
         }
     }
 }
