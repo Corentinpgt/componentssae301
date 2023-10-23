@@ -1,0 +1,11 @@
+{
+  "name": "components-sae301",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:w": "sass --watch style.scss:css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
