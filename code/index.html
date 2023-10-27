@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Démo Web Component</title>
+</head>
+<body>
+
+    <section class="section_modal_rupture">
+        <article class="modal_rupture">
+            <svg width="71" height="71" viewBox="0 0 71 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M71 35.5C71 55.1061 55.1061 71 35.5 71C15.8939 71 0 55.1061 0 35.5C0 15.8939 15.8939 0 35.5 0C55.1061 0 71 15.8939 71 35.5ZM16.9331 54.0669C15.3927 52.5265 15.3927 50.029 16.9331 48.4886L29.9217 35.5L16.9331 22.5114C15.3927 20.971 15.3927 18.4735 16.9331 16.9331C18.4735 15.3927 20.971 15.3927 22.5114 16.9331L35.5 29.9217L48.4886 16.9331C50.029 15.3927 52.5265 15.3927 54.0669 16.9331C55.6073 18.4735 55.6073 20.971 54.0669 22.5114L41.0783 35.5L54.0669 48.4886C55.6073 50.029 55.6073 52.5265 54.0669 54.0669C52.5265 55.6073 50.029 55.6073 48.4886 54.0669L35.5 41.0783L22.5114 54.0669C20.971 55.6073 18.4735 55.6073 16.9331 54.0669Z" fill="#FF0000"/>
+            </svg>
+            <p class="modal_rupture_para">Le stock du produit <span class="rupture_product">“{{nameproduct}}”</span> est insuffisant, veuillez réduire la quantité</p>
+            <button class="btn_product">ok</button>
+        </article>
+    </section>
+
+    <section class="section_modal_connexion">
+        <article class="modal_connexion">
+            <p class="modal_connexion_para">Pour valider votre panier, vous devez soit remplir le <a class="modal_connexion_links" href="">formulaire</a>, soit vous <a class="modal_connexion_links" href="">connecter</a>.</p>
+            <button class="btn_product">ok</button>
+        </article>
+    </section>
+
+
+
+    <nav class="navigation">
+        <section class="nav__section_black">
+            <div class="nav__section_black__info">
+                <ul class="list">
+                    <li class="list__item"><img class="list__item_img" src="assets/vector1.svg" alt="Svg localisation"></li>
+                    <li class="list__item"><p class="list__item_content">62 RUE PHILIPPE LEBON - LIMOGES</p></li>
+                </ul>
+                <ul class="list">
+                    <li class="list__item"><img class="list__item_img" src="assets/vector2.svg" alt="Svg téléphone"></li>
+                    <li class="list__item"><p class="list__item_content">+33 5 55 08 26 92</p></li>
+                </ul>
+            </div>
+    
+            <a class="nav__section_black__register">Créer un compte</a>
+        </section>
+    
+        <section class="nav__section">
+            <button class="btn-menu">
+                <span class="btn-menu__bar"></span>
+            </button>
+    
+            <img src="assets/logo.png" alt="Logo de l'entreprise" class="nav__section_image">
+    
+            <ul class="list-links notactive">
+                <li class="list__item"><a href="#" id="accueil" class="list__item_link">Accueil</a></li>
+                <li class="list__item"><a href="#" id="panier" class="list__item_link">Panier</a></li>
+            </ul>
+    
+            <ul class="list__profil">
+
+            </ul>
+        </section>
+    </nav>
+
+    <nav id="nav">
+        <ul>
+            <li><button data-id="3">casques</button></li>
+            <li>|</li>
+            <li><button data-id="1">vélo électriques</button></li>
+            <li>|</li>
+            <li><button data-id="2">gants</button></li>
+        </ul>
+    </nav>
+
+
+    <main id="content">
+
+    </main>
+
+
+
+    <footer class="footer">
+
+        <section class="footer__up">
+
+            <ul class="footer__upul">
+
+                <li class="footer__upli">
+                    <h2 class="footer__uph2">votre magasin de vélo</h2>
+                    <ul class="footer__upulsecond">
+                        <li class="footer__uplisecond">Giant Limoges</li>
+                        <li class="footer__uplisecond">62 Rue Philippe Lebron LIMOGES, 87280</li>
+                    </ul>
+                </li>
+
+                <li class="footer__upli">
+                    <h2 class="footer__uph2">nos marques</h2>
+                    <ul class="footer__upulsecond">
+                        <li class="footer__uplisecond">Anciennes Collections</li>
+                        <li class="footer__uplisecond">Manuels Utilisateurs</li>
+                        <li class="footer__uplisecond">Giant France</li>
+                        <li class="footer__uplisecond">Liv France</li>
+                    </ul>
+                </li>
+
+                <li class="footer__upli">
+                    <h2 class="footer__uph2">support</h2>
+                    <ul class="footer__upulsecond">
+                        <li class="footer__uplisecond">Contact</li>
+                        <li class="footer__uplisecond">Mentions Légales</li>
+                        <li class="footer__uplisecond">Enregistrement Produit</li>
+                        <li class="footer__uplisecond">Services</li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="footer__down">
+            <ul class="footer__ul">
+                <li class="footer__li">Giant Limoges</li>
+                <li class="footer__li">|</li>
+                <li class="footer__li">62 Rue Philippe Lebon</li>
+                <li class="footer__li">|</li>
+                <li class="footer__li">LIMOGES, 87280</li>
+                <li class="footer__li">|</li>
+                <li class="footer__li">Modifier les paramètres des cookies</li>
+            </ul>
+        </section>
+
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/popup.js"></script>
+</body>
+</html>
